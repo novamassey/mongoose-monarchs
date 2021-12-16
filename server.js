@@ -3,9 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var methodOverride = require('method-override');
 
 
 var indexRouter = require('./routes/index');
@@ -31,6 +32,10 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
