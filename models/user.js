@@ -8,7 +8,11 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  avatar: String
+  avatar: String,
+  haves: { type: Boolean, 
+    enum: ['Egss', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
+  needs: { type: Boolean, 
+    enum: ['Egss', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
 }, {
   timestamps: true
 });
