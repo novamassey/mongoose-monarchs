@@ -5,7 +5,7 @@ const postSchema = new Schema({
   title: String,
   topic: {
     type: String, 
-    enum: ['Butterfly', 'Caterpillar', 'Plants', 'Other']
+    enum: ['Butterfly', 'Caterpillar', 'Plants', 'Pests', 'Other']
       },
     imgContent: {
       data: Buffer,

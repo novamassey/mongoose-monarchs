@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<form id="new-post">
+    <label>Title:</label>
+    <input type="text" name="title">
+    <label>Topic:</label>
+    <select name="topic">
+        <option value="Butterfly">Butterfly</option>
+        <option value="Caterpillar">Caterpillar</option>
+        <option value="Plants">Plants</option>
+        <option value="Pests">Pests</option>
+        <option value="Other">Other</option>
+    </select>
+    <label>Upload Image:</label>
+    <img src="URL" loading="eager|lazy">
+    <label>Content:</label>
+    <textarea name="content"></textarea>
+    <button type="submit">POST</button>
+
+
+
+</form>
+
+
+<%- include('../partials/footer') %>

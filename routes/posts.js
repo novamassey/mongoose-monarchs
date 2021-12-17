@@ -6,5 +6,6 @@ const postsCtrl = require('../controllers/posts');
 router.get('/', postsCtrl.index);
 
 //GET 'posts/new' new
+router.get('/new', postsCtrl.new);
 
 module.exports = router;
