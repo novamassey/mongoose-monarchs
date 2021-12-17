@@ -11,6 +11,7 @@ module.exports = {
   function index(req, res) {
     Post.find({}, function(err, posts) {
       res.render("posts", {title: "POSTS", posts});
+      console.log(posts);
     });
   }
 
@@ -20,14 +21,14 @@ module.exports = {
 
   function create (req, res)  {
     const post = new Post(req.body);
-    post.user = req.user._id;
-    console.log(post);
+    req.body.user = req.user._id;
+    req.body.name = req.user.name;
     post.save(function(err) {
       if(err){
         console.log(err);
         return res.redirect("/posts/new");
       }
       console.log(post);
-      res.redirect("/posts")
+      res.render("posts")
     })
   };
