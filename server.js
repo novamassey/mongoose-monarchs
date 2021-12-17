@@ -11,6 +11,7 @@ var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
+var usersRouter = require('./routes/users');
 
 require('dotenv').config();
 require('./config/database');
@@ -42,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
+app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
