@@ -12,6 +12,7 @@ const postSchema = new Schema({
       contentType: String
       },
     content: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
   timestamps: true
 });

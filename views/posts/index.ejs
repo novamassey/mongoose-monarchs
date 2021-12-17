@@ -1,10 +1,13 @@
 <%- include('../partials/header') %>
 
 <div id="posts">
-    <h2 id="title"></h2>
-    <h4 id="topic"></h4>
-    <img scr id="default">
-    <textarea name="content"></textarea>
+    <% posts.forEach(function(post) { %>
+
+        <h2 id="title"><%= post.title %></h2>
+        <h4 id="topic"><<%= post.topic %></h4>
+        <img scr id="default">
+        <textarea name="content"><%= post.content %></textarea>
+   <% }); %>
 </div>
 
 

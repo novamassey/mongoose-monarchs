@@ -19,5 +19,15 @@ module.exports = {
   }
 
   function create (req, res)  {
-    
-  }
+    const post = new Post(req.body);
+    post.user = req.user._id;
+    console.log(post);
+    post.save(function(err) {
+      if(err){
+        console.log(err);
+        return res.redirect("/posts/new");
+      }
+      console.log(post);
+      res.redirect("/posts")
+    })
+  };
