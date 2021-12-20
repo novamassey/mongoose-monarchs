@@ -1,11 +1,20 @@
 const User = require("../models/user");
 const Post = require("../models/post");
-const user = require("../models/user");
+
 
 module.exports = {
     show,
     edit,
     update
+}
+
+function edit(req, res) {
+    console.log('we are in edit controller');
+    User.findById({_id:req.params.id}, function(err, user) {
+        console.log(user);
+        // if (err)  res.redirect(`users/${user._id}`);
+        res.render('users/edit', {user});
+        })
 }
 
 function show(req, res) {
@@ -22,19 +31,12 @@ function show(req, res) {
 //         })
 // }
 
-function edit(req, res){
-    User.findById({_id:req.params.id}, function(err, user) {
-        console.log(user);
-        if (err)  res.redirect(`users/${user._id}`);
-        res.render('/users/edit');
-        })
-}
 
 function update(req, res) {
-    // User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
-    //     if (err) res.redirect(`users/${user._id}`);
-    //     res.render('/users/show');
-    // })
+    User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
+        if (err) res.redirect(`users/${user._id}`);
+        res.render('/users/show');
+    })
 }
 
 

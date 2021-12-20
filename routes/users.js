@@ -11,7 +11,7 @@ const usersCtrl = require('../controllers/users');
 router.get('/:id', usersCtrl.show)
 
 //GET  "users/:id/edit" edit
-router.get('/users/:id/edit', usersCtrl.edit)
+router.get('/:id/edit', usersCtrl.edit)
 
 //PUT  'users/:id' update
 router.put('/:id',usersCtrl.update)
