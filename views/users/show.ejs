@@ -1,11 +1,27 @@
 <%- include('../partials/header'); %>
 
 <form id="user-profile" action="/users" method="POST">
-    
     <label>Name:</label>
-
+    <input type="text" name="name" value="<%= user.name %>">
+    <br>
+    <label>Email:</label>
+    <input name="email" value="<%= user.email %>">
+    <br>
     <label>Things I Have to Trade:</label>
-    <label>Things I Need</label>
+    <input type="checkbox" class="haves" name="Eggs">Eggs</input>
+    <input type="checkbox" class="haves" name="Caterpillars">Caterpillars</input>
+    <input type="checkbox" class="haves" name="Milkweed">Milkweed</input>
+    <input type="checkbox" class="haves" name="Milkweed Seeds">Milkweed Seeds</input>
+    <input type="checkbox" class="haves" name="Enclosure">Enclosure</input>
+    <input type="checkbox" class="haves" name="Pollinators">Pollinators</input>
+    <br>
+    <label>Things I Need:</label>
+    <input type="checkbox" class="needs" name="Eggs">Eggs</input>
+    <input type="checkbox" class="needs" name="Caterpillars">Caterpillars</input>
+    <input type="checkbox" class="needs" name="Milkweed">Milkweed</input>
+    <input type="checkbox" class="needs" name="Milkweed Seeds">Milkweed Seeds</input>
+    <input type="checkbox" class="needs" name="Enclosure">Enclosure</input>
+    <input type="checkbox" class="needs" name="Pollinators">Pollinators</input>
 </form>
 
 

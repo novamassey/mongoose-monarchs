@@ -15,7 +15,7 @@ function show(req, res) {
 };
 
 function edit(req, res){
-    User.findOneAndUpdate({_id:req.params.id}, req. body, {new:true}, function(err, user) {
+    User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
         if (err)  res.redirect('/posts');
         res.render(`users/${user._id}`);
         })
