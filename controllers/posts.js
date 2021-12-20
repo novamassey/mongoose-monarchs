@@ -11,7 +11,7 @@ module.exports = {
   function index(req, res) {
     Post.find({}, function(err, posts) {
       res.render("posts", {title: "POSTS", posts});
-      console.log(posts);
+      // console.log(posts);
     });
   }
 
@@ -29,6 +29,6 @@ module.exports = {
         return res.redirect("/posts/new");
       }
       console.log(post);
-      res.render("posts")
+      res.redirect("/posts")
     })
   };

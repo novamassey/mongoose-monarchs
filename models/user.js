@@ -11,7 +11,7 @@ const userSchema = new Schema({
   avatar: String,
   haves: { type: Boolean, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
-  needs: { type: Boolean, default: false,
+  needs: { type: Boolean, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
 }, {
   timestamps: true

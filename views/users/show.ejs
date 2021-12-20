@@ -9,27 +9,13 @@
         <br>
         </form>
 
-        <form id="trades" action="/users/<$user._id%>?_method=PUT" method="POST">
+        
             <h2>TRADES</H2>
-                <h4>If you would like to connect with other users to trade supplies check off items you have and items you need!</h4>
-        <label>Things I Have to Trade:</label>
-        <input type="checkbox" class="haves" name="Eggs">Eggs</input>
-        <input type="checkbox" class="haves" name="Caterpillars">Caterpillars</input>
-        <input type="checkbox" class="haves" name="Milkweed">Milkweed</input>
-        <input type="checkbox" class="haves" name="Milkweed Seeds">Milkweed Seeds</input>
-        <input type="checkbox" class="haves" name="Enclosure">Enclosure</input>
-        <input type="checkbox" class="haves" name="Pollinators">Pollinators</input>
-        <input type="submit" value="Update Haves">
-        <br>
-        <label>Things I Need:</label>
-        <input type="checkbox" class="needs" name="Eggs">Eggs</input>
-        <input type="checkbox" class="needs" name="Caterpillars">Caterpillars</input>
-        <input type="checkbox" class="needs" name="Milkweed">Milkweed</input>
-        <input type="checkbox" class="needs" name="Milkweed Seeds">Milkweed Seeds</input>
-        <input type="checkbox" class="needs" name="Enclosure">Enclosure</input>
-        <input type="checkbox" class="needs" name="Pollinators">Pollinators</input>
-        <input type="submit" value="Update Needs">
-    </form>
+                <h4>If you would like to connect with other users to trade click 
+                    <a href="/users/<%=user._id%>/edit">here</a>!</h4>
+                
+
+   
 
 
     <%- include('../partials/footer'); %>
