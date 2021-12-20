@@ -7,6 +7,7 @@ const usersCtrl = require('../controllers/users');
 //   res.send('respond with a resource');
 // });
 
+
 //GET "users/:id" show
 router.get('/:id', usersCtrl.show)
 

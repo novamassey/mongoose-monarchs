@@ -8,21 +8,27 @@ module.exports = {
     update
 }
 
+function show(req, res) {
+    User.findById({_id: req.params.id}, function(err, user) {
+        if(err) return res.redirect('/posts'); 
+        res.render('users/show', {user})
+    })
+};
 function edit(req, res) {
-    console.log('we are in edit controller');
     User.findById({_id:req.params.id}, function(err, user) {
-        console.log(user);
         // if (err)  res.redirect(`users/${user._id}`);
         res.render('users/edit', {user});
         })
 }
 
-function show(req, res) {
-    User.findById({_id: req.params.id}, function(err, user) {
-        if(err) return res.redirect('/posts'); 
-        res.render('users/show', {title: "User Profile"})
+function update(req, res) {
+    User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
+        console.log(user);
+        if (err) res.redirect('/users/show');
+        res.redirect(`/users/${user._id}`);
     })
-};
+}
+
 
 // function edit(req, res){
 //     User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
@@ -32,12 +38,6 @@ function show(req, res) {
 // }
 
 
-function update(req, res) {
-    User.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(err, user) {
-        if (err) res.redirect(`users/${user._id}`);
-        res.render('/users/show');
-    })
-}
 
 
 
