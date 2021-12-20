@@ -13,4 +13,6 @@ router.get('/:id', usersCtrl.show)
 //GET  "users/:id/edit" edit
 router.get('/users/:id/edit', usersCtrl.edit)
 
+//PUT  'users/:id' update
+
 module.exports = router;
