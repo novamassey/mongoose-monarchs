@@ -7,12 +7,12 @@
             <h4 id="topic"><%= post.topic %></h4>
             <img src="<%= post.image %>">
             <textarea name="content"><%= post.content %></textarea>
-            <% if(user) { %>
             
-            <a href="/posts/<%= post._id %>/comments">Add Comment</a>
+            
+                <% if (user) { %>
+                <a href="/posts/<%= post._id %>/comments">Add Comment</a>
          
-            <% } %>
-            <% if (user && user._id.equals(post.user)) { %>
+           
                 <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
                   <button type="submit">DELETE</button>
                 </form>
