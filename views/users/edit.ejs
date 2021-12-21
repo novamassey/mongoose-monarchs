@@ -2,7 +2,7 @@
 <form id="trades" action="/users/<%=user._id%>?_method=PUT" method="POST">
 
       <label>Things I Have to Trade:</label>
-
+    <br>
       <select name="haves" multiple>
           <option value="Eggs">Eggs</option>
           <option value="Caterpillars">Caterpillars</option>
@@ -10,8 +10,10 @@
           <option value="Milkweed Seeds">Milkseeds</option>
           <option value="Enclosure">Enclosure</option>
           </select>
-          
+        
+          <br>     
     <label>Things I Need to Trade:</label>
+ <br>
         <select name="needs" multiple>
         <option value="Eggs">Eggs</option>
         <option value="Caterpillars">Caterpillars</option>
@@ -19,8 +21,13 @@
         <option value="Milkweed Seeds">Milkseeds</option>
         <option value="Enclosure">Enclosure</option>
         </select>
-      
-   
+        <br>
+        <label>Image:</label>
+        <input type="text" name="image"></input>
+        <br>
+        <label>Describe  your  trade item here:</label>
+        <br>
+        <textarea name="trades"></textarea>
       <input type="submit" value="Update">
   </form>
 

@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<div id="trades">
+    
+    <% users.forEach(function(u) { %>
+
+        
+        <h2 id="name"><%= u.name %></h2>
+        <% u.haves.forEach(function(have){ %>
+
+            <h3><%= have %></h3>
+            <label name="image"></label>
+            <img src="<%= u.image %>">
+            <textarea name="content"><%= u.content %></textarea>
+            <% }) %>
+   <% }) %>
+
+
+</div>
+
+<%- include('../partials/footer'); %>

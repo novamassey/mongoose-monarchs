@@ -5,6 +5,7 @@ const Post = require("../models/post");
 module.exports = {
   index,
   new: newPost,
+  show,
   create
   };
 
@@ -17,6 +18,10 @@ module.exports = {
 
   function newPost (req, res) {
     res.render("posts/new", {title: "New  Post"});
+  }
+
+  function show(req, res) {
+
   }
 
   function create (req, res)  {

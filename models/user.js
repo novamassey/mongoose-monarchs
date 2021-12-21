@@ -13,6 +13,7 @@ const userSchema = new Schema({
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
   needs: [{ type: String, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
+  trades: String,
 }, {
   timestamps: true
 });
