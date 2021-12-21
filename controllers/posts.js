@@ -1,13 +1,15 @@
 const User = require("../models/user");
 const Post = require("../models/post");
+const post = require("../models/post");
 
 
 module.exports = {
   index,
   new: newPost,
-  // show,
-  create
-  };
+  show,
+  create,
+  delete: deletePost
+  }
 
   function index(req, res) {
     Post.find({}, function(err, posts) {
@@ -16,15 +18,15 @@ module.exports = {
     });
   }
 
+  function show(req, res) {
+    Post.findById(req.params.id, function(err, post) {
+        if(err) return res.redirect('/posts'); 
+        res.render('posts/show', {post})
+    })
+};
   function newPost (req, res) {
     res.render("posts/new", {title: "New  Post"});
   }
-
-  // function show(req, res) {
-  //   Post.findById(req.params.id, function(err, post){
-  //     res.render('posts/show', {post})
-  //   })
-  // }
 
   function create (req, res)  {
     const post = new Post(req.body);
@@ -39,3 +41,18 @@ module.exports = {
       res.redirect("/posts")
     })
   };
+
+  function deletePost (req, res) {
+    Post.findById(req.params.id).then(function(post){
+      post.remove()
+      .then(function(){
+        res.redirect('/posts');
+      })
+      .catch(function(err){
+        return next(err);
+      })
+    })  
+  }
+
+
+   
