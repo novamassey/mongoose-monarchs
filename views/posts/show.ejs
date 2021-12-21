@@ -7,7 +7,9 @@
             <h4 id="topic"><%= post.topic %></h4>
             <img src="<%= post.image %>">
             <textarea name="content"><%= post.content %></textarea>
+            <% if(user) %>
             <a href="/posts/<%= post._id %>/comments">Add Comment</a>
+            <% } %>
             
      
     
