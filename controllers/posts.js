@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const Post = require("../models/post");
-const post = require("../models/post");
+// const post = require("../models/post");
 
 
 module.exports = {
@@ -22,16 +22,16 @@ module.exports = {
     Post.findById(req.params.id, function(err, post) {
         if(err) return res.redirect('/posts'); 
         res.render('posts/show', {post})
-    })
-};
-  function newPost (req, res) {
+      })
+   };
+  
+function newPost (req, res) {
     res.render("posts/new", {title: "New  Post"});
   }
 
   function create (req, res)  {
-    const post = new Post(req.body);
     req.body.user = req.user._id;
-    req.body.name = req.user.name;
+    const post = new Post(req.body);
     post.save(function(err) {
       if(err){
         console.log(err);
