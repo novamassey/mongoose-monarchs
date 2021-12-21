@@ -11,6 +11,7 @@ const userSchema = new Schema({
   avatar: String,
   haves: [{ type: String, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
+  image: String,
   needs: [{ type: String, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
   trades: String,

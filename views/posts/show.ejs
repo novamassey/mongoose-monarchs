@@ -7,8 +7,14 @@
         <h4 id="topic">
             <%= post.topic %>
         </h4>
-        <img src="<%= post.image %>">
-        <textarea name="content"><%= post.content %></textarea>
+        <img src="<%= post.image %>" width="75%">
+        <p name="content"><%= post.content %></p>
+        <% if (post.comments.length) { %>
+           <% post.comments.forEach(function(comment){ %>
+            <h6><%=comment.userName %></h6>
+            <p><%= comment.content %></p>
+           <% }) %>
+        <% } %>
         <% if (user) { %>
             <form id="add-comment" method="POST" action="/posts/<%= post._id %>/comments">
                 <label>Add Comment:</label>
@@ -18,18 +24,11 @@
                 <input type="submit" value="Add Comment">
             </form>
             <% } %>
-            <% if (post.comments.length) { %>
-               <% post.comments.forEach(function(comment){ %>
-                <h4><%=comment.userName %></h4>
-                <p><%= comment.content %></p>
-               <% }) %>
-            
-            <% } %>
 
 
                 <% if (user && user._id.equals(post.user)) { %>
                     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                        <button type="submit">DELETE</button>
+                        <button type="submit">DELETE POST</button>
                     </form>
                     <% } %>
 

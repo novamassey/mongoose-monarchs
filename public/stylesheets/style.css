@@ -17,3 +17,10 @@ a {
 .login img {
   height: 30px;
 }
+
+.img {
+  float: left;
+  width:  100px;
+  height: 100px;
+  background-size: cover;
+}
