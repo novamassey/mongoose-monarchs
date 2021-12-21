@@ -6,7 +6,7 @@ const postsCtrl = require('../controllers/posts');
 router.get('/posts', postsCtrl.index);
 
 //GET '/posts/:id' show
-router.get('/posts', postsCtrl.show)
+router.get('/posts/:id', postsCtrl.show)
 
 //GET 'posts/new' new
 router.get('/posts/new', postsCtrl.new);
