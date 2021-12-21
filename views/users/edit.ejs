@@ -2,21 +2,25 @@
 <form id="trades" action="/users/<%=user._id%>?_method=PUT" method="POST">
 
       <label>Things I Have to Trade:</label>
-      <input type="checkbox" class="haves" name="Eggs">Eggs</input>
-      <input type="checkbox" class="haves" name="Caterpillars">Caterpillars</input>
-      <input type="checkbox" class="haves" name="Milkweed">Milkweed</input>
-      <input type="checkbox" class="haves" name="Milkweed Seeds">Milkweed Seeds</input>
-      <input type="checkbox" class="haves" name="Enclosure">Enclosure</input>
-      <input type="checkbox" class="haves" name="Pollinators">Pollinators</input>
-      <br>
-      <label>Things I Need:</label>
-      <input type="checkbox" class="needs" name="Eggs">Eggs</input>
-      <input type="checkbox" class="needs" name="Caterpillars">Caterpillars</input>
-      <input type="checkbox" class="needs" name="Milkweed">Milkweed</input>
-      <input type="checkbox" class="needs" name="Milkweed Seeds">Milkweed Seeds</input>
-      <input type="checkbox" class="needs" name="Enclosure">Enclosure</input>
-      <input type="checkbox" class="needs" name="Pollinators">Pollinators</input>
-      <br>
+
+      <select name="haves" multiple>
+          <option value="Eggs">Eggs</option>
+          <option value="Caterpillars">Caterpillars</option>
+          <option value="Milkweed">Milkweed</option>
+          <option value="Milkweed Seeds">Milkseeds</option>
+          <option value="Enclosure">Enclosure</option>
+          </select>
+          
+    <label>Things I Need to Trade:</label>
+        <select name="needs" multiple>
+        <option value="Eggs">Eggs</option>
+        <option value="Caterpillars">Caterpillars</option>
+        <option value="Milkweed">Milkweed</option>
+        <option value="Milkweed Seeds">Milkseeds</option>
+        <option value="Enclosure">Enclosure</option>
+        </select>
+      
+   
       <input type="submit" value="Update">
   </form>
 

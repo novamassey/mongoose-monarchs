@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
-// const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var methodOverride = require('method-override');
+
 
 
 var indexRouter = require('./routes/index');

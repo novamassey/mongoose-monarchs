@@ -5,6 +5,8 @@ mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true
   });
 
+
+
   const db = mongoose.connection;
 	
 db.on('connected', function() {

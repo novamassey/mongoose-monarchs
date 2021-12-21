@@ -9,10 +9,10 @@ const userSchema = new Schema({
   },
   email: String,
   avatar: String,
-  haves: { type: Boolean, 
-    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
-  needs: { type: Boolean, 
-    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']},
+  haves: [{ type: String, 
+    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
+  needs: [{ type: String, 
+    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
 }, {
   timestamps: true
 });
