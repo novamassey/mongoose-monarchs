@@ -1,11 +1,12 @@
 <%- include('../partials/header') %>
 
 <div id="trades">
+    <h4><%=user.name %></h4>
     
     <% users.forEach(function(u) { %>
 
         
-        <h2 id="name"><%= u.name %></h2>
+        
         <% u.haves.forEach(function(have){ %>
 
             <h3><%= have %></h3>
