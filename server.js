@@ -7,7 +7,7 @@ var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
 
-
+var isLoggedIn = require('./config/auth');
 
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
@@ -44,8 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/', postsRouter);
-app.use('/', usersRouter);
-app.use('/', commentsRouter);
+app.use('/', isLoggedIn, usersRouter);
+app.use('/', isLoggedIn, commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

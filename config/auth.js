@@ -1,4 +1,4 @@
-module.exports  = function(req, res, next) {
+module.exports  = function isLoggedIn(req, res, next) {
     //if there is user, keep the pipeline flowing
     if (req.isAuthenticated()) return next();
     //if not, redirect to login page
