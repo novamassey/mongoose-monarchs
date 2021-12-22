@@ -18,14 +18,7 @@ nav {
   justify-content:space-evenly;
   width:100%;
 }
-.fixednav {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.staticnav {
-  position: static;
-}
+
 .login {
   display: flex;
   justify-content: center;
@@ -35,6 +28,12 @@ nav {
 
 .login img {
   height: 30px;
+}
+#home {
+  align-items:center;
+  height:450px;
+  border-radius: 15px 50px;
+  border: 2px solid white;
 }
 
 
@@ -71,7 +70,10 @@ nav {
   body {
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
-    
+    }
+  #home {
+    grid-column-start: 2; 
+    height:400px;
   }
   div {
     grid-column-start: 2;
