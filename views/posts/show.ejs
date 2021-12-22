@@ -10,6 +10,7 @@
             <img src="<%= post.image %>">
         </div>
         <p name="content"><%= post.content %></p>
+        <h4>Comments:</h4>
         <% if (post.comments.length) { %>
            <% post.comments.forEach(function(comment){ %>
             <h5><%= comment.content %></h5>
