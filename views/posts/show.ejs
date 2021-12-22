@@ -7,7 +7,9 @@
         <h4 id="topic">
             <%= post.topic %>
         </h4>
-        <img class="size" src="<%= post.image %>">
+        <div class="crop">
+            <img src="<%= post.image %>">
+        </div>
         <p name="content"><%= post.content %></p>
         <% if (post.comments.length) { %>
            <% post.comments.forEach(function(comment){ %>
