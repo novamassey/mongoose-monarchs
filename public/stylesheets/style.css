@@ -1,15 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: black;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size:110%;
   
 }
 
 a {
-  color: #00B7FF;
+  color: rgba(196, 75, 45, 1)
 }
 
 nav {
   text-align:center;
+  display:flexbox;
+  justify-content:space-evenly;
+
 }
 
 .login {
@@ -23,12 +30,15 @@ nav {
   height: 30px;
 }
 
-.crop{
+
+
+.crop{ 
   height: 200px;
   width: 300px;
   overflow: hidden;
 }
-.crop img{
+
+.crop img {
   width: 100%;
   height: auto;
   position: relative;
