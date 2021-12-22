@@ -73,7 +73,8 @@ nav {
     }
   #home {
     grid-column-start: 2; 
-    height:400px;
+    height:500px;
+    margin:100px;
   }
   div {
     grid-column-start: 2;
