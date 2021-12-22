@@ -101,5 +101,14 @@ nav {
     -ms-transform: translateY(-50%); /* IE 9 */
     transform: translateY(-50%); /* IE 10, Fx 16+, Op 12.1+ */
   }
+
+  #user-profile, #trades {
+    grid-column-start: 2;
+    margin-top:100px;
+  }
+  form {
+    grid-column-start: 2;
+    margin-top:100px;
+  }
   
 }

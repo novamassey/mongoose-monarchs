@@ -4,9 +4,7 @@
         <h2 id="title">
             <%= post.title %>
         </h2>
-        <h4 id="topic">
-            <%= post.topic %>
-        </h4>
+        <h4 id="topic">Topic: <%= post.topic %></h4>
         <h5> Submitted By: <%= user.name %></h5>
         <div class="crop">
             <img src="<%= post.image %>">
@@ -14,8 +12,8 @@
         <p name="content"><%= post.content %></p>
         <% if (post.comments.length) { %>
            <% post.comments.forEach(function(comment){ %>
-            <h6><%=comment.userName %></h6>
             <h5><%= comment.content %></h5>
+            <h6><%=comment.userName %></h6>
            <% }) %>
         <% } %>
         <% if (user) { %>
