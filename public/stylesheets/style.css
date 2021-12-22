@@ -5,7 +5,6 @@ body {
   color: white;
   font-family: 'Abril Fatface', cursive;
   font-size:110%;
-  
 }
 
 a {
@@ -36,6 +35,8 @@ nav {
   height: 200px;
   width: 300px;
   overflow: hidden;
+  border-radius: 15px 50px;
+  border: 2px solid white;
 }
 
 .crop img {
