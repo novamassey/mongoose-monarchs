@@ -1,17 +1,18 @@
 <%- include('../partials/header') %>
 
 <div id="trades">
-    <h4><%=user.name %></h4>
+   
     
     <% users.forEach(function(u) { %>
         <% u.haves.forEach(function(have){ %>
 
-            <h3><%= have %></h3>
-           
+            
             <label name="image"></label>
             <div class="crop">
                 <img src="<%= u.image %>" width="85%">
             </div>
+            <h4><%= have %></h4>
+            <h5><%=u.name %></h5>
             <h4 name="trades"><%= u.trades %></h4>
             <% }) %>
    <% }) %>
