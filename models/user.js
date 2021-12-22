@@ -8,7 +8,6 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  avatar: String,
   haves: [{ type: String, 
     enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
   image: String,

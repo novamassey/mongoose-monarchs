@@ -5,7 +5,7 @@
             <%= post.title %>
         </h2>
         <h4 id="topic">Topic: <%= post.topic %></h4>
-        <h5> Submitted By: <%= user.name %></h5>
+        <h5> Submitted By: <%= post.user.name %></h5>
         <div class="crop">
             <img src="<%= post.image %>">
         </div>
