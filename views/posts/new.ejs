@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <form id="new-post"  action="/posts" method="POST">
+    <div id="create">
     <label>Title:</label>
     <input type="text" name="title">
     <br>
@@ -22,7 +23,7 @@
     <input type="text" name="image"></input>
     <br>
     <button type="submit">POST</button>
-
+</div>
 
 
 </form>

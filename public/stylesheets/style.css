@@ -35,6 +35,9 @@ nav {
   border-radius: 15px 50px;
   border: 2px solid white;
 }
+#create {
+  grid-column-start: 2
+}
 
 
 

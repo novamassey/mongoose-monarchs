@@ -1,0 +1,6 @@
+#SAVE THE MONARCHS
+>An application to connect users that raise Monarch butterflies to each other to share posts of their success, process and problems, as well as a source to trade resources to help improve the monarch butterflies chance of survival.
+##Monarch Decline Back Story
+>Past years have seen a dramatic drop in the amount of Monarch butterflies making their annual migration.  Only 2%-10% of monarch caterpillars survive to become a butterfly in nature and with their habitat and natural host plants in decline it has become even more important for home gardeners to provide host plants, pollinator plants and in some cases quarantining the caterpillars to protect them from disease and parasites to ensure they make it to adulthood. 
+##Monarch Raisers in CA Issues
+>In Souther California during the end of summer nurseries tend to run out of milkweed host plants and gardeners raising monarchs find themselves with thier host plants stripped clean and a lot hungry caterpillars.  The hope with this application is to connect local users so caterpillars can be rehomed to users with plenty of milkweed, milkweed plants and/or seeds can be traded between users, success tips can be shared in the posts forum all in the hopes of helping the Monarch population.
