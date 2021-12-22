@@ -18,9 +18,13 @@ a {
   height: 30px;
 }
 
-.img {
-  float: left;
-  width:  100px;
+.size {
   height: 100px;
-  background-size: cover;
+  width: 300px;
+  overflow: hidden;
+}
+
+.size img {
+ height: auto;
+ width: 300px;
 }
