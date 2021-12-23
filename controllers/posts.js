@@ -36,7 +36,7 @@ function newPost (req, res) {
 
   function create (req, res)  {
     req.body.user = req.user._id;
-    const post = new Post(req.body).populate('user').exec();
+    const post = new Post(req.body)
     post.save(function(err) {
       if(err){
         console.log(err);
