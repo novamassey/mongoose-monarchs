@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel+Decorative&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel+Decorative&family=Orbitron:wght@400;500&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <nav id="navigation" class="static">
         <h1>SAVE THE MONARCHS</h1>
         <a href="/">HOME</a>
         <% if (user) {%>
-        <a href="/posts"> POSTS</a>
-        <a href="/posts/new">CREATE POST</a>
-        <a href="/users/<%=user._id %>">PROFILE</a>
-        <a href="/users">MARKETPLACE</a>
-        <a href="/logout"> LOGOUT</a>
-        <% }else{ %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
+            <a href="/posts"> POSTS</a>
+            <a href="/posts/new">CREATE POST</a>
+            <a href="/users/<%=user._id %>">PROFILE</a>
+            <a href="/users">MARKETPLACE</a>
+            <a href="/logout"> LOGOUT</a>
+            <% }else{ %>
+                <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+                <% } %>
     </nav>
-    

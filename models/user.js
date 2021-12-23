@@ -8,11 +8,15 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  haves: [{ type: String, 
-    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
+  haves: [{
+    type: String,
+    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']
+  }],
   image: String,
-  needs: [{ type: String, 
-    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']}],
+  needs: [{
+    type: String,
+    enum: ['Eggs', 'Caterpillars', 'Milkweed', 'Milkweed Seeds', 'Enclosure', 'Pollinators']
+  }],
   trades: String,
 }, {
   timestamps: true

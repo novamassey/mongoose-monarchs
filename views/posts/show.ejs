@@ -4,39 +4,47 @@
         <h2 id="title">
             <%= post.title %>
         </h2>
-        <h4 id="topic">Topic: <%= post.topic %></h4>
+        <h4 id="topic">Topic: <%= post.topic %>
+        </h4>
 
-        <h5> Submitted By: <%= post.user.name %></h5>
+        <h5> Submitted By: <%= post.user.name %>
+        </h5>
 
-            
+
         <div class="crop">
             <img src="<%= post.image %>">
         </div>
-        <p name="content"><%= post.content %></p>
+        <p name="content">
+            <%= post.content %>
+        </p>
         <h4>Comments:</h4>
         <% if (post.comments.length) { %>
-           <% post.comments.forEach(function(comment){ %>
-            <h5><%= comment.content %></h5>
-            <h6><%=comment.userName %></h6>
-           <% }) %>
-        <% } %>
-        <% if (user) { %>
-            <form id="add-comment" method="POST" action="/posts/<%= post._id %>/comments">
-                <label>Add Comment:</label>
-                <br>
-                <textarea name="content"></textarea>
-                <br>
-                <input type="submit" value="Add Comment">
-            </form>
-            <% } %>
-
-
-            <%= console.log(user, user._id, post.user) %>
-                <% if (user && user._id.equals(post.user._id)) { %>
-                    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                        <button type="submit">DELETE POST</button>
-                    </form>
+            <% post.comments.forEach(function(comment){ %>
+                <h5>
+                    <%= comment.content %>
+                </h5>
+                <h6>
+                    <%=comment.userName %>
+                </h6>
+                <% }) %>
                     <% } %>
+                        <% if (user) { %>
+                            <form id="add-comment" method="POST" action="/posts/<%= post._id %>/comments">
+                                <label>Add Comment:</label>
+                                <br>
+                                <textarea name="content"></textarea>
+                                <br>
+                                <input type="submit" value="Add Comment">
+                            </form>
+                            <% } %>
+
+
+                                <%= console.log(user, user._id, post.user) %>
+                                    <% if (user && user._id.equals(post.user._id)) { %>
+                                        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                                            <button type="submit">DELETE POST</button>
+                                        </form>
+                                        <% } %>
 
 
     </div>

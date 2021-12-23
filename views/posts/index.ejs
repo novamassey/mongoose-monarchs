@@ -1,18 +1,22 @@
 <%- include('../partials/header') %>
 
-<div id="posts">
-     <% posts.forEach(function(p) { %>
-        
+    <div id="posts">
+        <% posts.forEach(function(p) { %>
+
             <div class="crop">
                 <img src="<%= p.image %>" width="85%">
-            </div> 
-            <div> 
-            <h3 id="topic"><%= p.topic %></h3>
-            <p name="content"><%= p.content %></p>
-            <a href="/posts/<%= p._id %>">Details</a>
             </div>
-    <% }) %>
-</div>
+            <div>
+                <h3 id="topic">
+                    <%= p.topic %>
+                </h3>
+                <p name="content">
+                    <%= p.content %>
+                </p>
+                <a href="/posts/<%= p._id %>">Details</a>
+            </div>
+            <% }) %>
+    </div>
 
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

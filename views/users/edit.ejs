@@ -1,35 +1,35 @@
 <%- include('../partials/header') %>
-<form id="trades" action="/users/<%=user._id%>?_method=PUT" method="POST">
+  <form id="trades" action="/users/<%=user._id%>?_method=PUT" method="POST">
 
-      <label>Things I Have to Trade:</label>
+    <label>Things I Have to Trade:</label>
     <br>
-      <select name="haves" multiple>
-          <option value="Eggs">Eggs</option>
-          <option value="Caterpillars">Caterpillars</option>
-          <option value="Milkweed">Milkweed</option>
-          <option value="Milkweed Seeds">Milkseeds</option>
-          <option value="Enclosure">Enclosure</option>
-          </select>
-        
-          <br>     
+    <select name="haves" multiple>
+      <option value="Eggs">Eggs</option>
+      <option value="Caterpillars">Caterpillars</option>
+      <option value="Milkweed">Milkweed</option>
+      <option value="Milkweed Seeds">Milkseeds</option>
+      <option value="Enclosure">Enclosure</option>
+    </select>
+
+    <br>
     <label>Things I Need to Trade:</label>
- <br>
-        <select name="needs" multiple>
-        <option value="Eggs">Eggs</option>
-        <option value="Caterpillars">Caterpillars</option>
-        <option value="Milkweed">Milkweed</option>
-        <option value="Milkweed Seeds">Milkseeds</option>
-        <option value="Enclosure">Enclosure</option>
-        </select>
-        <br>
-        <label>Image:</label>
-        <input type="text" name="image"></input>
-        <br>
-        <label>Describe  your  trade item here:</label>
-        <br>
-        <textarea name="trades"></textarea>
-        <br>
-      <input type="submit" value="Update">
+    <br>
+    <select name="needs" multiple>
+      <option value="Eggs">Eggs</option>
+      <option value="Caterpillars">Caterpillars</option>
+      <option value="Milkweed">Milkweed</option>
+      <option value="Milkweed Seeds">Milkseeds</option>
+      <option value="Enclosure">Enclosure</option>
+    </select>
+    <br>
+    <label>Image:</label>
+    <input type="text" name="image"></input>
+    <br>
+    <label>Describe your trade item here:</label>
+    <br>
+    <textarea name="trades"></textarea>
+    <br>
+    <input type="submit" value="Update">
   </form>
 
   <%- include('../partials/footer') %>

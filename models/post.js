@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-  content: {type: String, required: true},
-  user: {type: Schema.Types.ObjectId, ref: 'User'},
+  content: { type: String, required: true },
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
   userName: String,
-  userAvatar: String
 })
 
 const postSchema = new Schema({
@@ -17,7 +16,7 @@ const postSchema = new Schema({
   image: String,
   content: String,
   user: { type: Schema.Types.ObjectId, ref: 'User' },
-  comments:[commentSchema]
+  comments: [commentSchema]
 }, {
   timestamps: true
 });
