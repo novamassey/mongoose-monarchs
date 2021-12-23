@@ -18,12 +18,17 @@ module.exports = {
     });
   }
 
-  function show(req, res) {
-    Post.findById(req.params.id, function(err, post) {
-        if(err) return res.redirect('/posts'); 
-        res.render('posts/show', {post})
-      })
-   };
+  // function show(req, res) {
+  //   Post.findById(req.params.id, function(err, post) {
+  //       if(err) return res.redirect('/posts'); 
+  //       res.render('posts/show', {post})
+  //     })
+  //  };
+
+  async function show(req, res) {
+    const post = await Post.findById(req.params.id).populate('user').exec();
+    res.render('posts/show', {post})
+  }
   
 function newPost (req, res) {
     res.render("posts/new", {title: "New  Post"});
@@ -31,7 +36,7 @@ function newPost (req, res) {
 
   function create (req, res)  {
     req.body.user = req.user._id;
-    const post = new Post(req.body);
+    const post = new Post(req.body).populate('user').exec();
     post.save(function(err) {
       if(err){
         console.log(err);

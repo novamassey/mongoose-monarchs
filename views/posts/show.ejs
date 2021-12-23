@@ -5,7 +5,10 @@
             <%= post.title %>
         </h2>
         <h4 id="topic">Topic: <%= post.topic %></h4>
+
         <h5> Submitted By: <%= post.user.name %></h5>
+
+            
         <div class="crop">
             <img src="<%= post.image %>">
         </div>
@@ -28,7 +31,8 @@
             <% } %>
 
 
-                <% if (user && user._id.equals(post.user)) { %>
+            <%= console.log(user, user._id, post.user) %>
+                <% if (user && user._id.equals(post.user._id)) { %>
                     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
                         <button type="submit">DELETE POST</button>
                     </form>

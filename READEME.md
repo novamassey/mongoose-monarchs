@@ -44,7 +44,7 @@ Screen Shots of the App
  * Google Authentication
  * Method-Override
  * Express
- * Session
+ * Sessions
  * Passport
  * Dotenv
 
@@ -58,5 +58,9 @@ Screen Shots of the App
 * I would like to fix up my Needs and Haves forms so that multiple items, images and descriptions can be posted to the marketplace.
 * I would like to connect a Javascript file so that I can switch the classes of the marketplace items so that the border is highlighted if the user has needs that match other users haves in the marketplace.
 * I would like to implement a messaging feature so users can connect  about how to meet up to make trades.
+
+## References
+* Home Page Image by [Thula Na](https://unsplash.com/@thula25?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+* Stack OverFlow to size, center images by [Alessia](https://stackoverflow.com/users/6339408/alessia) at [Stack OverFlow](https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-different-height-and-width-the-same-via-css)
 
 
